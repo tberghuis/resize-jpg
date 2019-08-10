@@ -5,6 +5,7 @@ const sh = require("shelljs");
 const picDir = "/media/tom/tomseagate/Pictures/2019-08-10-malaysia";
 
 sh.cd(picDir);
+sh.mkdir("resize");
 const { stdout } = sh.ls("*.jpg");
 const pics = stdout.trim().split(/\n/);
 pics.forEach(function(pic) {
